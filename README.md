@@ -7,9 +7,9 @@
 
 Math-magicians is a fictional company based in France. They have requested your help to build a simple product that would assist them with their calculations. An important thing to notice is that they have asked for a product that is not just fully-functional, but also beautiful and user-friendly..
 
-## Booting Screen
+## Basic Calc Screen
 
-![screenshot1](.png)
+![screenshot1](./src/assets/images/screenshot.PNG)
 
 ## Built With
 
