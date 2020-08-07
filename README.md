@@ -65,13 +65,6 @@ $ npm run start
 
 - Open [http://localhost:3000/](http://localhost:3080/) on your browser.
 
-Now you are all set to start fighting gainst the dark wizard's forces. Will yo be able to get at the top of the leaderboarrd? Enjoy!
-
-
-### Prerequisites
-
-- Node. If you do not have Node installed in your local machine, please refer to the [Official Documentation](https://nodejs.org/en/download/)
-- Basic command line knowledge.
 
 ## Author
 

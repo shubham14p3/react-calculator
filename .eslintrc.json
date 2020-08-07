@@ -18,7 +18,8 @@
     "no-param-reassign": "off",
     "eol-last": "off",
     "arrow-parens": "off",
-    "no-unused-vars": "off"
+	"no-unused-vars": "off",
+	"react/prefer-stateless-function":  [0, { "ignorePureComponents": true }]
   },
   "ignorePatterns": ["dist/", "build/"]
 }
