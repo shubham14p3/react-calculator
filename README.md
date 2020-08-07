@@ -1,65 +1,92 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# React Basic Calculator
 
-# Project Name
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
 
-> One paragraph statement about the project.
+Math-magicians is a fictional company based in France. They have requested your help to build a simple product that would assist them with their calculations. An important thing to notice is that they have asked for a product that is not just fully-functional, but also beautiful and user-friendly..
 
-![screenshot](./app_screenshot.png)
+## Booting Screen
 
-Additional description about the project and its features.
+![screenshot1](.png)
 
 ## Built With
 
-- Major languages,
-- frameworks,
-- technologies used
+### Developing tools
 
-## Live Demo
+- Node.js
+- React
+- React-Dom
+- CSS
+- ES6
+- Github
 
-[Live Demo Link](https://livedemo.com)
+### Styling and Lints
 
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
+- Eslint
+- Stylelint
 
 ### Deployment
 
+- Heroku
+
+## Getting Started
+
+To get started with the app, please follow these steps:
+
+- Navigate to the folder where you would like to save the game.
+
+- Open your terminal by right-clicking, and opening the command line of your choice.
+
+- Clone the repo by typing:
+
+```
+$ git clone https://github.com/shubham14p3/react-calculator.git
+```
+
+- Access the newly created folder by typing:
+
+```
+$ cd react-calculator
+```
+
+- Install the necessary dependencies:
+
+```
+npm install
+```
+
+- Bundle the resources and run the code locally:
+
+```
+$ npm run start
+```
+
+- Open [http://localhost:3000/](http://localhost:3080/) on your browser.
+
+Now you are all set to start fighting gainst the dark wizard's forces. Will yo be able to get at the top of the leaderboarrd? Enjoy!
 
 
-## Authors
+### Prerequisites
 
-👤 **Author1**
+- Node. If you do not have Node installed in your local machine, please refer to the [Official Documentation](https://nodejs.org/en/download/)
+- Basic command line knowledge.
 
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
+## Author
 
-👤 **Author2**
+👤 **Shubham Raj**
 
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
+- Github: [@ShubhamRaj](https://github.com/shubham14p3)
+- Linkedin: [Shubham14p3](https://www.linkedin.com/in/shubham14p3/)
+
+## Future Upgrades
+
+- Conveting basic calculator to scientific calculator.
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!
-
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/shubham14p3/react-calculator/issues).
 
 ## Show your support
 
@@ -67,81 +94,16 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Project requested by [Microverse Program](https://www.microverse.org/).
+- Game based on the very successful DBZ franchise. All rights reserved to DBZ Team. The use of her property is solely for educational purposes.
 
-## 📝 License
+<!-- MARKDOWN LINKS & IMAGES -->
 
-This project is [MIT](lic.url) licensed.
-
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `yarn start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `yarn test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-
+[contributors-shield]: https://img.shields.io/github/contributors/shubham14p3/react-calculator.svg?style=flat-square
+[contributors-url]: https://github.com/shubham14p3/react-calculator/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/shubham14p3/react-calculator.svg?style=flat-square
+[forks-url]: https://github.com/shubham14p3/react-calculator/network/members
+[stars-shield]: https://img.shields.io/github/stars/shubham14p3/react-calculator.svg?style=flat-square
+[stars-url]: https://github.com/shubham14p3/react-calculator/stargazers
+[issues-shield]: https://img.shields.io/github/issues/shubham14p3/react-calculator.svg?style=flat-square
+[issues-url]: https://github.com/shubham14p3/react-calculator/issues
