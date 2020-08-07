@@ -1,12 +1,14 @@
-import React from 'react';
-import Display from './Display';
-import ButtonPanel from './ButtonPanel';
+import React from "react";
+import Display from "./Display";
+import ButtonPanel from "./ButtonPanel";
 
-export default function App() {
+function App() {
   return (
-    <div className="calculator-body">
-      <Display result="0" />
+    <div id="calculator">
+      <Display />
       <ButtonPanel />
     </div>
   );
 }
+
+export default App;

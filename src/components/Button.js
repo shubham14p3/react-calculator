@@ -1,14 +1,28 @@
-/* eslint-disable react/prefer-stateless-function */
 import React from "react";
-import PropTypes from "prop-types";
+import propTypes from "prop-types";
 
-export default class Button extends React.Component {
-  render() {
-    const {name} = this.props;
-    return <button type="submit">{name}</button>;
-  }
+function Button(props) {
+  const {name, wide, color} = props;
+
+  return (
+    <div
+      className={`button ${wide && "large"}`.trim()}
+      style={{backgroundColor: color}}
+    >
+      {name}
+    </div>
+  );
 }
 
-Button.propTypes = {
-  name: PropTypes.string.isRequired,
+Button.defaultProps = {
+  wide: false,
+  color: "orange",
 };
+
+Button.propTypes = {
+  name: propTypes.string.isRequired,
+  wide: propTypes.bool,
+  color: propTypes.string,
+};
+
+export default Button;
