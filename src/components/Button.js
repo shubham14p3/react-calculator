@@ -1,14 +1,15 @@
-/* eslint-disable react/prefer-stateless-function */
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react';
+import propTypes from 'prop-types';
 
-export default class Button extends React.Component {
-  render() {
-    const {name} = this.props;
-    return <button type="submit">{name}</button>;
-  }
+function Button(props) {
+  const { name } = props;
+  return (
+    <div>{name}</div>
+  );
 }
 
 Button.propTypes = {
-  name: PropTypes.string.isRequired,
+  name: propTypes.string.isRequired,
 };
+
+export default Button;
