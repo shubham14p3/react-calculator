@@ -7,9 +7,9 @@
 
 Math-magicians is a fictional company based in France. They have requested your help to build a simple product that would assist them with their calculations. An important thing to notice is that they have asked for a product that is not just fully-functional, but also beautiful and user-friendly..
 
-## Booting Screen
+## Basic Calc Screen
 
-![screenshot1](.png)
+![screenshot1](./src/assets/images/screenshot.PNG)
 
 ## Built With
 
@@ -65,13 +65,6 @@ $ npm run start
 
 - Open [http://localhost:3000/](http://localhost:3080/) on your browser.
 
-Now you are all set to start fighting gainst the dark wizard's forces. Will yo be able to get at the top of the leaderboarrd? Enjoy!
-
-
-### Prerequisites
-
-- Node. If you do not have Node installed in your local machine, please refer to the [Official Documentation](https://nodejs.org/en/download/)
-- Basic command line knowledge.
 
 ## Author
 
