@@ -3,7 +3,7 @@ import propTypes from 'prop-types';
 
 function Display(props) {
   const { result } = props;
-  return <div className="display">{result}</div>;
+  return <div>{result}</div>;
 }
 
 Display.defaultProps = {
