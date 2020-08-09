@@ -1,5 +1,5 @@
-import React from "react";
-import Button from "./Button";
+import React from 'react';
+import Button from './Button';
 
 function ButtonPanel() {
   return (
@@ -31,7 +31,6 @@ function ButtonPanel() {
       <div>
         <Button name="0" />
         <Button name="." />
-
         <Button name="=" />
       </div>
     </div>
