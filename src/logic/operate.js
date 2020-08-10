@@ -1,27 +1,26 @@
-import Big from "big.js";
+import Big from 'big.js';
 
 const operate = (numberOne, numberTwo, operation) => {
   const oneBig = Big(numberOne);
   const twoBig = Big(numberTwo);
 
-  if (operation === "-") {
+  if (operation === '-') {
     return oneBig.minus(twoBig);
   }
 
-  if (operation === "+") {
+  if (operation === '+') {
     return oneBig.plus(twoBig);
   }
 
-  if (operation === "/" && numberTwo) {
+  if (operation === '/' && numberTwo) {
     return oneBig.div(twoBig);
   }
 
-  if (operation === "/" && numberTwo === 0) {
+  if (operation === '/' && numberTwo === 0) {
     return Infinity;
   }
 
-  
-  if (operation === "X") {
+  if (operation === 'X') {
     return oneBig.mul(twoBig);
   }
 

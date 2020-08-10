@@ -1,7 +1,7 @@
-import operate from "./operate";
+import operate from './operate';
 
-const calculate = ({total, next, operation}, buttonName) => {
-  if (buttonName === "+/-" && next) {
+const calculate = ({ total, next, operation }, buttonName) => {
+  if (buttonName === '+/-' && next) {
     return {
       total,
       next: (parseFloat(next) * -1).toString(),
@@ -9,7 +9,7 @@ const calculate = ({total, next, operation}, buttonName) => {
     };
   }
 
-  if (buttonName === "+/-" && !next && total) {
+  if (buttonName === '+/-' && !next && total) {
     return {
       total: (parseFloat(total) * -1).toString(),
       next,
@@ -25,7 +25,7 @@ const calculate = ({total, next, operation}, buttonName) => {
     };
   }
 
-  if (buttonName === "." && next && !next.includes(".")) {
+  if (buttonName === '.' && next && !next.includes('.')) {
     return {
       total,
       next: `${next}.`,
@@ -33,7 +33,7 @@ const calculate = ({total, next, operation}, buttonName) => {
     };
   }
 
-  if (buttonName === "AC") {
+  if (buttonName === 'AC') {
     return {
       total: null,
       next: null,
@@ -62,30 +62,30 @@ const calculate = ({total, next, operation}, buttonName) => {
       total: operate(
         parseFloat(total),
         parseFloat(next),
-        buttonName
+        buttonName,
       ).toString(),
       next: null,
       operation: buttonName,
     };
   }
 
-  if (buttonName === "%" && next && total) {
+  if (buttonName === '%' && next && total) {
     return {
       total,
-      next: operate(parseFloat(next), 100, "/").toString(),
+      next: operate(parseFloat(next), 100, '/').toString(),
       operation,
     };
   }
 
-  if (buttonName === "%" && next && !total) {
+  if (buttonName === '%' && next && !total) {
     return {
-      total: operate(parseFloat(next), 100, "/").toString(),
+      total: operate(parseFloat(next), 100, '/').toString(),
       next: null,
       operation: null,
     };
   }
 
-  if (buttonName === "=" && next && total) {
+  if (buttonName === '=' && next && total) {
     return {
       total: operate(parseFloat(total), parseFloat(next), operation).toString(),
       next: null,
@@ -99,6 +99,5 @@ const calculate = ({total, next, operation}, buttonName) => {
     operation,
   };
 };
-
 
 export default calculate;

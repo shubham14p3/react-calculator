@@ -1,13 +1,13 @@
-import React from "react";
-import propTypes from "prop-types";
+import React from 'react';
+import propTypes from 'prop-types';
 
 function Button(props) {
-  const {name, wide, color} = props;
+  const { name, wide, color } = props;
 
   return (
     <div
-      className={`button ${wide && "large"}`.trim()}
-      style={{backgroundColor: color}}
+      className={`button ${wide && 'large'}`.trim()}
+      style={{ backgroundColor: color }}
     >
       {name}
     </div>
@@ -16,7 +16,7 @@ function Button(props) {
 
 Button.defaultProps = {
   wide: false,
-  color: "orange",
+  color: 'orange',
 };
 
 Button.propTypes = {
