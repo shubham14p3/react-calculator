@@ -1,37 +1,53 @@
-import React from 'react';
-import Button from './Button';
+import React from "react";
+import "../index.scss";
+import Button from "./Button";
 
-function ButtonPanel() {
+function ButtonPanel(clickHandler) {
+  const renderButton = (name) => {
+    const wide = name === "0";
+    const color = !["÷", "X", "-", "+", "="].includes(name)
+      ? "light-grey"
+      : "orange";
+    return (
+      <Button
+        name={name}
+        wide={wide}
+        color={color}
+        onClick={() => clickHandler.onClick(name)}
+      />
+    );
+  };
+
   return (
-    <div className="buttonPanel">
-      <div className="button_group">
-        <Button name="AC" color="lightgray" />
-        <Button name="+/-" color="lightgray" />
-        <Button name="%" color="lightgray" />
-        <Button name="÷" />
+    <div className="button-panel">
+      <div className="row">
+        {renderButton("AC")}
+        {renderButton("+/-")}
+        {renderButton("%")}
+        {renderButton("÷")}
       </div>
-      <div className="button_group">
-        <Button name="7" color="lightgray" />
-        <Button name="8" color="lightgray" />
-        <Button name="9" color="lightgray" />
-        <Button name="X" />
+      <div className="row">
+        {renderButton("7")}
+        {renderButton("8")}
+        {renderButton("9")}
+        {renderButton("X")}
       </div>
-      <div className="button_group">
-        <Button name="4" color="lightgray" />
-        <Button name="5" color="lightgray" />
-        <Button name="6" color="lightgray" />
-        <Button name="-" />
+      <div className="row">
+        {renderButton("4")}
+        {renderButton("5")}
+        {renderButton("6")}
+        {renderButton("-")}
       </div>
-      <div className="button_group">
-        <Button name="1" color="lightgray" />
-        <Button name="2" color="lightgray" />
-        <Button name="2" color="lightgray" />
-        <Button name="+" />
+      <div className="row">
+        {renderButton("1")}
+        {renderButton("2")}
+        {renderButton("3")}
+        {renderButton("+")}
       </div>
-      <div className="button_group">
-        <Button name="0" wide color="lightgray" />
-        <Button name="." color="lightgray" />
-        <Button name="=" />
+      <div className="row">
+        {renderButton("0")}
+        {renderButton(".")}
+        {renderButton("=")}
       </div>
     </div>
   );
