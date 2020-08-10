@@ -1,17 +1,15 @@
-import React from 'react';
-import propTypes from 'prop-types';
+import React from "react";
+import "../index.scss";
 
-function Display(props) {
-  const { result } = props;
-  return <div className="display">{result}</div>;
+function Display({result}) {
+  const resultToDisplay = result || "0";
+  return <div className="display">{resultToDisplay}</div>;
 }
 
-Display.defaultProps = {
-  result: '0',
-};
+Display.propTypes = {};
 
-Display.propTypes = {
-  result: propTypes.string,
+Display.defaultProps = {
+  result: "0",
 };
 
 export default Display;
