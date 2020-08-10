@@ -1,28 +1,29 @@
-import React from 'react';
-import propTypes from 'prop-types';
+import React from "react";
+import "../index.scss";
+import PropTypes from "prop-types";
 
-function Button(props) {
-  const { name, wide, color } = props;
+function Button({name, wide, color, onClick}) {
+  const style = {
+    width: wide ? "50%" : "25%",
+    background: color,
+  };
 
   return (
-    <div
-      className={`button ${wide && 'large'}`.trim()}
-      style={{ backgroundColor: color }}
-    >
+    <button type="submit" style={style} onClick={onClick}>
       {name}
-    </div>
+    </button>
   );
 }
 
-Button.defaultProps = {
-  wide: false,
-  color: 'orange',
+Button.propTypes = {
+  name: PropTypes.string.isRequired,
+  wide: PropTypes.bool.isRequired,
+  color: PropTypes.string,
+  onClick: PropTypes.func.isRequired,
 };
 
-Button.propTypes = {
-  name: propTypes.string.isRequired,
-  wide: propTypes.bool,
-  color: propTypes.string,
+Button.defaultProps = {
+  color: "orange",
 };
 
 export default Button;
