@@ -1,103 +1,70 @@
-import operate from './operate';
+import Operate from "./operate";
 
-const calculate = ({ total, next, operation }, buttonName) => {
-  if (buttonName === '+/-' && next) {
-    return {
-      total,
-      next: (parseFloat(next) * -1).toString(),
-      operation,
-    };
+const Calculate = (calculator, buttonName) => {
+  const {total, next, operation} = calculator;
+
+  if (["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"].includes(buttonName)) {
+    if (operation) {
+      return {total, next: next ? next + buttonName : buttonName, operation};
+    }
+    return {total: total ? total + buttonName : buttonName, next, operation};
   }
 
-  if (buttonName === '+/-' && !next && total) {
+  if (buttonName === "AC") {
+    return {total: null, next: null, operation: null};
+  }
+  if (buttonName === "+/-") {
+    if (next) {
+      return {
+        total,
+        next: Operate(next, "-1", "X"),
+        operation,
+      };
+    }
     return {
-      total: (parseFloat(total) * -1).toString(),
+      total: Operate(total, "-1", "X"),
       next,
       operation,
     };
   }
-
-  if (buttonName.match(/0-9/)) {
-    return {
-      total,
-      next: next ? `${next}${buttonName}` : `${buttonName}`,
-      operation,
-    };
+  if (buttonName === ".") {
+    if (next) {
+      return {total, next: next + buttonName, operation};
+    }
+    if (operation) {
+      return {total, next: `0${buttonName}`, operation};
+    }
+    return {total: total + buttonName, next, operation};
   }
-
-  if (buttonName === '.' && next && !next.includes('.')) {
+  if (buttonName === "=") {
+    if (operation === "÷" && next === "0") {
+      return {
+        total: "No division by 0",
+        next: null,
+        operation: null,
+      };
+    }
     return {
-      total,
-      next: `${next}.`,
-      operation,
-    };
-  }
-
-  if (buttonName === 'AC') {
-    return {
-      total: null,
+      total: next ? Operate(total, next, operation) : total,
       next: null,
       operation: null,
     };
   }
-
-  if (buttonName.match(/[-+/X]/) && next && !total) {
+  if (operation) {
+    if (operation === "÷" && next === "0") {
+      return {
+        total: "No division by 0",
+        next: null,
+        operation: null,
+      };
+    }
     return {
-      total: next,
+      total: Operate(total, next, operation),
       next: null,
       operation: buttonName,
     };
   }
-
-  if (buttonName.match(/[-+/X]/) && !next && total) {
-    return {
-      total,
-      next,
-      operation: buttonName,
-    };
-  }
-
-  if (buttonName.match(/[-+/X]/) && next && total) {
-    return {
-      total: operate(
-        parseFloat(total),
-        parseFloat(next),
-        buttonName,
-      ).toString(),
-      next: null,
-      operation: buttonName,
-    };
-  }
-
-  if (buttonName === '%' && next && total) {
-    return {
-      total,
-      next: operate(parseFloat(next), 100, '/').toString(),
-      operation,
-    };
-  }
-
-  if (buttonName === '%' && next && !total) {
-    return {
-      total: operate(parseFloat(next), 100, '/').toString(),
-      next: null,
-      operation: null,
-    };
-  }
-
-  if (buttonName === '=' && next && total) {
-    return {
-      total: operate(parseFloat(total), parseFloat(next), operation).toString(),
-      next: null,
-      operation: null,
-    };
-  }
-
-  return {
-    total,
-    next,
-    operation,
-  };
+  return {total, next: null, operation: buttonName};
 };
 
-export default calculate;
+export default Calculate;
