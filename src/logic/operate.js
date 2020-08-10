@@ -20,6 +20,7 @@ const operate = (numberOne, numberTwo, operation) => {
     return Infinity;
   }
 
+  
   if (operation === "X") {
     return oneBig.mul(twoBig);
   }
