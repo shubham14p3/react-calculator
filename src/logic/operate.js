@@ -1,30 +1,25 @@
-import Big from 'big.js';
+import Big from "big.js";
 
-const operate = (numberOne, numberTwo, operation) => {
-  const oneBig = Big(numberOne);
-  const twoBig = Big(numberTwo);
-
-  if (operation === '-') {
-    return oneBig.minus(twoBig);
+const Operate = (number1, number2, operation) => {
+  const bigNum1 = Big(number1);
+  const bigNum2 = Big(number2);
+  if (operation === "%") {
+    return bigNum2 === 0 ? "0" : bigNum1.times(bigNum2).div(100).toString();
+  }
+  if (operation === "÷") {
+    return bigNum1.div(bigNum2).toString();
+  }
+  if (operation === "X") {
+    return bigNum1.times(bigNum2).toString();
+  }
+  if (operation === "-") {
+    return bigNum1.minus(bigNum2).toString();
+  }
+  if (operation === "+") {
+    return bigNum1.plus(bigNum2).toString();
   }
 
-  if (operation === '+') {
-    return oneBig.plus(twoBig);
-  }
-
-  if (operation === '/' && numberTwo) {
-    return oneBig.div(twoBig);
-  }
-
-  if (operation === '/' && numberTwo === 0) {
-    return Infinity;
-  }
-
-  if (operation === 'X') {
-    return oneBig.mul(twoBig);
-  }
-
-  return 0;
+  return null;
 };
 
-export default operate;
+export default Operate;
