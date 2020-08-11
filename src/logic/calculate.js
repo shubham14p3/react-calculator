@@ -2,12 +2,12 @@ import isNum from '../utils/isNum';
 import operate from './operate';
 
 const calculate = (dataObject, buttonName) => {
-  if(buttonName === 'AC') {
+  if (buttonName === 'AC') {
     return {
       operation: null,
       total: null,
-      next: null
-    }
+      next: null,
+    };
   }
 
   if (buttonName === '+/-') {
@@ -21,7 +21,7 @@ const calculate = (dataObject, buttonName) => {
 
   if (isNum(buttonName)) {
     if (buttonName === '0' && dataObject.next === '0') {
-      return {total: null, next:null, operation: null};
+      return { total: null, next: null, operation: null };
     }
     if (dataObject.operation) {
       if (dataObject.next) {
@@ -41,7 +41,6 @@ const calculate = (dataObject, buttonName) => {
       total: null,
     };
   }
-  
 
   if (buttonName === '=') {
     if (dataObject.next && dataObject.operation) {
@@ -56,11 +55,11 @@ const calculate = (dataObject, buttonName) => {
 
   if (buttonName === '.') {
     if (dataObject.next) {
-      return { next: dataObject.next + '.' };
+      return { next: `${dataObject.next}.` };
     }
-    
+
     if (dataObject.total) {
-      return { total: dataObject.total + '.' };
+      return { total: `${dataObject.total}.` };
     }
     return { total: '0.' };
   }
@@ -77,12 +76,11 @@ const calculate = (dataObject, buttonName) => {
     return { operation: buttonName };
   }
 
-
   return {
     total: dataObject.next,
     next: null,
     operation: buttonName,
   };
-}
+};
 
 export default calculate;
