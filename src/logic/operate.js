@@ -1,25 +1,26 @@
 import Big from 'big.js';
 
-const Operate = (number1, number2, operation) => {
-  const bigNum1 = Big(number1);
-  const bigNum2 = Big(number2);
-  if (operation === '%') {
-    return bigNum2 === 0 ? '0' : bigNum1.times(bigNum2).div(100).toString();
-  }
-  if (operation === '÷') {
-    return bigNum1.div(bigNum2).toString();
-  }
-  if (operation === 'X') {
-    return bigNum1.times(bigNum2).toString();
-  }
-  if (operation === '-') {
-    return bigNum1.minus(bigNum2).toString();
-  }
-  if (operation === '+') {
-    return bigNum1.plus(bigNum2).toString();
+const operate = (numberOne, numberTwo, operator) => {
+  const first = Big(numberOne);
+  const second = Big(numberTwo);
+  let num = '';
+  switch(operator) {
+    case '+': num = first.plus(second).toString()
+      break;
+    case '-': num = first.sub(second).toString();
+      break;
+    case '*': num = first.mul(second).toString();
+      break;
+    case '/': 
+      num = numberTwo === '0' ? '0' :  first.div(second).toString();
+      break;
+    case '%': num = first.mod(second).toString();
+      break;
+    default: 
+      throw Error(`Unknown operation ${operator}`);
   }
 
-  return null;
-};
+  return num;
+}
 
-export default Operate;
+export default operate;
