@@ -1,56 +1,45 @@
 import React from 'react';
-import '../index.scss';
 import Button from './Button';
 
-function ButtonPanel(clickHandler) {
-  const renderButton = (name) => {
-    const wide = name === '0';
-    const color = !['÷', 'X', '-', '+', '='].includes(name)
-      ? 'light-grey'
-      : 'orange';
-    return (
-      <Button
-        name={name}
-        wide={wide}
-        color={color}
-        onClick={() => clickHandler.onClick(name)}
-      />
+class ButtonPanel extends React.Component {
+  clickHandler = (buttonName) => {
+    this.props.clickHandler(buttonName);
+  }
+  render() {
+    return(
+      <div className="button-panel">
+        <div>
+          <Button name='AC' color='grey' clickHandler={this.clickHandler}/>
+          <Button name='+/-' color='grey' clickHandler={this.clickHandler} />
+          <Button name='%' color='grey' clickHandler={this.clickHandler}/>
+          <Button name='/' clickHandler={this.clickHandler} />
+        </div>
+        <div>
+          <Button name='7' color='grey' clickHandler={this.clickHandler}/>
+          <Button name='8' color='grey' clickHandler={this.clickHandler}/>
+          <Button name='9' color='grey' clickHandler={this.clickHandler}/>
+          <Button name='*' clickHandler={this.clickHandler} />
+        </div>
+        <div>
+          <Button name='4' color='grey' clickHandler={this.clickHandler}/>
+          <Button name='5' color='grey' clickHandler={this.clickHandler}/>
+          <Button name='6' color='grey' clickHandler={this.clickHandler}/>
+          <Button name='-' clickHandler={this.clickHandler} />
+        </div>
+        <div>
+          <Button name='1' color='grey' clickHandler={this.clickHandler}/>
+          <Button name='2' color='grey' clickHandler={this.clickHandler}/>
+          <Button name='3' color='grey' clickHandler={this.clickHandler}/>
+          <Button name='+' clickHandler={this.clickHandler} />
+        </div>
+        <div>
+          <Button name='0' color='grey' clickHandler={this.clickHandler} wide='50%'/>
+          <Button name='.' color='grey' clickHandler={this.clickHandler}/>
+          <Button name='=' clickHandler={this.clickHandler} />
+        </div>
+      </div>
     );
-  };
-
-  return (
-    <div className="button-panel">
-      <div className="row">
-        {renderButton('AC')}
-        {renderButton('+/-')}
-        {renderButton('%')}
-        {renderButton('÷')}
-      </div>
-      <div className="row">
-        {renderButton('7')}
-        {renderButton('8')}
-        {renderButton('9')}
-        {renderButton('X')}
-      </div>
-      <div className="row">
-        {renderButton('4')}
-        {renderButton('5')}
-        {renderButton('6')}
-        {renderButton('-')}
-      </div>
-      <div className="row">
-        {renderButton('1')}
-        {renderButton('2')}
-        {renderButton('3')}
-        {renderButton('+')}
-      </div>
-      <div className="row">
-        {renderButton('0')}
-        {renderButton('.')}
-        {renderButton('=')}
-      </div>
-    </div>
-  );
+  }
 }
 
 export default ButtonPanel;
