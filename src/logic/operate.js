@@ -14,7 +14,7 @@ const operate = (numberOne, numberTwo, operator) => {
     case '/':
       num = numberTwo === '0' ? '0' : first.div(second).toString();
       break;
-    case '%': num = first.mod(second).toString();
+    case '%': num = first.div(second).toString();
       break;
     default:
       throw Error(`Unknown operation ${operator}`);
