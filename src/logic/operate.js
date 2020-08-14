@@ -8,19 +8,19 @@ const operate = (numberOne, numberTwo, operation) => {
     operandTwo = Big(numberTwo);
   }
   switch (operation) {
-    case "%":
+    case '%':
       result = operandOne.times(0.01);
       break;
-    case "+":
+    case '+':
       result = operandOne.plus(operandTwo);
       break;
-    case "-":
+    case '-':
       result = operandOne.minus(operandTwo);
       break;
-    case "x":
+    case 'x':
       result = operandOne.times(operandTwo);
       break;
-    case "/":
+    case '/':
       try {
         result = operandOne.div(operandTwo);
       } catch (e) {
@@ -29,7 +29,7 @@ const operate = (numberOne, numberTwo, operation) => {
       break;
     default:
   }
-  return result ? result.toString() : "No division by zero";
+  return result ? result.toString() : 'No division by zero';
 };
 
 export default operate;
