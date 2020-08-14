@@ -19,6 +19,7 @@
     "eol-last": "off",
     "arrow-parens": "off",
 	"no-unused-vars": "off",
+	"no-unresolved":"off",
 	"react/jsx-filename-extension": 0,
     "mport/no-extraneous-dependencies": 0,
     "amelcase": 0,
