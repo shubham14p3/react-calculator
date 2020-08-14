@@ -1,4 +1,4 @@
-import Big from 'big.js';
+import Big from 'big.js';// eslint-disable-line no-use-before-define
 
 const operate = (numberOne, numberTwo, operation) => {
   let result = Big(0);
