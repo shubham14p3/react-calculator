@@ -19,7 +19,7 @@ class ButtonPanel extends React.Component {
           <Button name="7" color="grey" clickHandler={this.clickHandler} />
           <Button name="8" color="grey" clickHandler={this.clickHandler} />
           <Button name="9" color="grey" clickHandler={this.clickHandler} />
-          <Button name="*" clickHandler={this.clickHandler} />
+          <Button name="x" clickHandler={this.clickHandler} />
         </div>
         <div>
           <Button name="4" color="grey" clickHandler={this.clickHandler} />
