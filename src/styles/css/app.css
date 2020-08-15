@@ -13,6 +13,9 @@
   text-align: right;
   color: white;
   padding: 20px;
+  font-size: 3.5em;
+  font-weight: 500;
+  margin-top: 25px;
 }
 
 .button-panel {
@@ -34,3 +37,5 @@ button {
   font-weight: 400;
   width: 100%;
 }
+
+/*# sourceMappingURL=app.css.map */
