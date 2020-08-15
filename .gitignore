@@ -4,7 +4,6 @@
 /node_modules
 /.pnp
 .pnp.js
-/src/eslintrc.js
 
 # testing
 /coverage
