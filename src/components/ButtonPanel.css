@@ -1,10 +1,9 @@
-.buttonPanel{
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+.buttonPanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.buttonGroup{
-	display: flex;
+.buttonGroup {
+  display: flex;
 }
-
