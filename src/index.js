@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import AppLogic from './components/App';
+import App from './components/App';
 
-ReactDOM.render(<AppLogic />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));

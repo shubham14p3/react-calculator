@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Button.css';
 
-const Button = (props) => {
+const Button = props => {
   const { name } = props;
   const { color } = props;
   const { isWide } = props;
