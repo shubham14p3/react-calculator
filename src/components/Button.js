@@ -1,28 +1,36 @@
 import React from 'react';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
+import './Button.css';
 
-function Button(props) {
-  const { name, wide, color } = props;
-
+const Button = props => {
+  const { name } = props;
+  const { color } = props;
+  const { isWide } = props;
   return (
-    <div
-      className={`button ${wide && 'large'}`.trim()}
-      style={{ backgroundColor: color }}
-    >
-      {name}
-    </div>
+    isWide
+      ? (
+        <div className="Button" style={{ width: '50%' }}>
+          <button type="button" onClick={props.onClick} style={{ backgroundColor: color }}>{name}</button>
+        </div>
+      )
+      : (
+        <div className="Button" style={{ width: '25%' }}>
+          <button type="button" onClick={props.onClick} style={{ backgroundColor: color }}>{name}</button>
+        </div>
+      )
   );
-}
-
-Button.defaultProps = {
-  wide: false,
-  color: 'orange',
 };
 
 Button.propTypes = {
-  name: propTypes.string.isRequired,
-  wide: propTypes.bool,
-  color: propTypes.string,
+  name: PropTypes.string,
+  color: PropTypes.string,
+  isWide: PropTypes.bool,
+  onClick: PropTypes.func.isRequired,
+};
+Button.defaultProps = {
+  name: '',
+  color: '#FF911A',
+  isWide: false,
 };
 
 export default Button;

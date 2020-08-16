@@ -5,21 +5,26 @@
     "jest": true
   },
   "parserOptions": {
-    "ecmaVersion": 2018,
-    "sourceType": "module",
     "ecmaFeatures": {
-      "jsx": true,
-      "modules": true
-    }
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
   },
-  "extends": ["airbnb-base"],
+  "extends": ["airbnb", "plugin:react/recommended"],
+  "plugins": ["react"],
   "rules": {
-    "no-shadow": "off",
-    "no-param-reassign": "off",
-    "eol-last": "off",
-    "arrow-parens": "off",
-	"no-unused-vars": "off",
-	"react/prefer-stateless-function":  [0, { "ignorePureComponents": true }]
+    "react/jsx-filename-extension": ["warn", { "extensions": [".js", ".jsx"] }],
+    "import/no-unresolved": "off",
+	"no-shadow": "off",
+	"react/destructuring-assignment": "off",
+	"no-param-reassign":"off",
+	"import/no-named-as-default":"off",
+	"no-restricted-globals":"off",
+    "arrow-parens": ["error", "as-needed"]
   },
-  "ignorePatterns": ["dist/", "build/"]
+  "ignorePatterns": [
+    "dist/",
+    "build/"
+  ]
 }
