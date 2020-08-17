@@ -71,6 +71,11 @@ $ npm run start
 - Open [http://localhost:3000/](http://localhost:3080/) on your browser.
 
 
+# Working Logics
+
+- Need to reset the code everytime so kindly press "AC" button before executing every new calc.
+- Function that can work "+","-","x","%","/" 
+
 ## Author
 
 👤 **Shubham Raj**
