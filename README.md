@@ -1,65 +1,85 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# React Basic Calculator
 
-# Project Name
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
 
-> One paragraph statement about the project.
+Math-magicians is a fictional company based in France. They have requested your help to build a simple product that would assist them with their calculations. An important thing to notice is that they have asked for a product that is not just fully-functional, but also beautiful and user-friendly..
 
-![screenshot](./app_screenshot.png)
+## Basic Calc Screen
 
-Additional description about the project and its features.
+![screenshot1](./src/assets/images/screenshot.PNG)
 
 ## Built With
 
-- Major languages,
-- frameworks,
-- technologies used
+### Developing tools
 
-## Live Demo
+- Node.js
+- React
+- React-Dom
+- CSS
+- ES6
+- Github
 
-[Live Demo Link](https://livedemo.com)
+### Styling and Lints
 
-
-## Getting Started
-
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
-
-### Install
-
-### Usage
-
-### Run tests
+- Eslint
+- Stylelint
 
 ### Deployment
 
+- Heroku
+
+## Getting Started
+
+To get started with the app, please follow these steps:
+
+- Navigate to the folder where you would like to save the game.
+
+- Open your terminal by right-clicking, and opening the command line of your choice.
+
+- Clone the repo by typing:
+
+```
+$ git clone https://github.com/shubham14p3/react-calculator.git
+```
+
+- Access the newly created folder by typing:
+
+```
+$ cd react-calculator
+```
+
+- Install the necessary dependencies:
+
+```
+npm install
+```
+
+- Bundle the resources and run the code locally:
+
+```
+$ npm run start
+```
+
+- Open [http://localhost:3000/](http://localhost:3080/) on your browser.
 
 
-## Authors
+## Author
 
-👤 **Author1**
+👤 **Shubham Raj**
 
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
+- Github: [@ShubhamRaj](https://github.com/shubham14p3)
+- Linkedin: [Shubham14p3](https://www.linkedin.com/in/shubham14p3/)
 
-👤 **Author2**
+## Future Upgrades
 
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
+- Conveting basic calculator to scientific calculator.
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!
-
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/shubham14p3/react-calculator/issues).
 
 ## Show your support
 
@@ -67,10 +87,16 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Project requested by [Microverse Program](https://www.microverse.org/).
+- Game based on the very successful DBZ franchise. All rights reserved to DBZ Team. The use of her property is solely for educational purposes.
 
-## 📝 License
+<!-- MARKDOWN LINKS & IMAGES -->
 
-This project is [MIT](lic.url) licensed.
+[contributors-shield]: https://img.shields.io/github/contributors/shubham14p3/react-calculator.svg?style=flat-square
+[contributors-url]: https://github.com/shubham14p3/react-calculator/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/shubham14p3/react-calculator.svg?style=flat-square
+[forks-url]: https://github.com/shubham14p3/react-calculator/network/members
+[stars-shield]: https://img.shields.io/github/stars/shubham14p3/react-calculator.svg?style=flat-square
+[stars-url]: https://github.com/shubham14p3/react-calculator/stargazers
+[issues-shield]: https://img.shields.io/github/issues/shubham14p3/react-calculator.svg?style=flat-square
+[issues-url]: https://github.com/shubham14p3/react-calculator/issues
