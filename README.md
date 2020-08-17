@@ -9,9 +9,14 @@ Math-magicians is a fictional company based in France. They have requested your 
 
 ## Basic Calc Screen
 
-![screenshot1](./src/assets/images/screenshot.PNG)
+![screenshot](./src/assets/images/screenshot.png)
 
-## Built With
+## Live Link
+
+[Live Version](https://react-calculator-sh.herokuapp.com/)
+
+
+## Built Wit
 
 ### Developing tools
 
