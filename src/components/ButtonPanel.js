@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
-import './ButtonPanel.css';
+import '../assets/styles/ButtonPanel.css';
 
 class ButtonPanel extends React.PureComponent {
   render() {
