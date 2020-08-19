@@ -13,7 +13,7 @@ Math-magicians is a fictional company based in France. They have requested your 
 
 ## Live Link
 
-[Live Version](https://react-calculator-sh.herokuapp.com/)
+[Try Here](https://react-calculator-sh.herokuapp.com/)
 
 
 ## Built Wit
